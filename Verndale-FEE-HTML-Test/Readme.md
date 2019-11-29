@@ -7,7 +7,7 @@ To see this test open in browser `./src/index.html`
 ### TODO List
 - Desktop Screen Pixel Perfect Chrome (OK)
 - Tablet Screen Pixel Perfect Chrome (OK)
-- Mobile Screen Pixel Perfect Chrome 
+- Mobile Screen Pixel Perfect Chrome (OK)
 - Desktop Screen IE 11 (OK)
 - Desktop Screen FF (OK)
 - Desktop Screen Safari (OK)
