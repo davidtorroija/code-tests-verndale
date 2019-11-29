@@ -1,0 +1,143 @@
+html{ 
+    font-size: 1px;/*for using REM units*/
+}
+body{
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+    font-size: 16rem;
+    font-weight: 400;
+    line-height: 1.3;
+    color: #222;
+    margin-top: 85px;
+}
+ul {
+    list-style: none;
+    display: flex;
+    padding-inline-start: 0;
+}
+
+ul.module-list {
+    display: grid;
+    grid-column-gap: 25px;
+    grid-auto-flow: column;
+    /* grid-template-columns: 290px; */
+    /* grid-auto-columns: 312px; */
+}
+li.module {
+    border: 10px solid;
+    padding: 16px;
+    padding-top: 1px;
+    width: 312px;
+    height: 471px;
+    position: relative;
+}
+
+.module-title{
+    font-size: 18px;
+    line-height: 24px;
+    font-family: "Interstate Plus", "Arial";
+    font-weight: 800;
+}
+.upper-case {
+    text-transform: uppercase;
+}
+.underline {
+    text-decoration: underline;
+}
+.module > img {
+    text-align: center;
+    margin: 0 auto;
+    display: block;
+    width: 262px;
+    margin-top: 12px;
+}
+.module.blue-tile {
+    background-color: #2baae2;
+    border-color: #56bbe8;
+    color: white;
+}
+.module.yellow-tile {
+    background-color: #fed33b;
+    border-color: #fedc62;
+    color: black;
+}
+.blue-tile a {
+    color: white;
+}
+.yellow-tile a {
+    color: black;
+}
+.module-p {
+    font-family: "Interstate", "Arial";
+    font-size: 16px;
+    line-height: 28px;
+    font-weight: 300;
+    
+}
+.module h2, .module p {
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+
+h3 {
+    font-size: 14px;
+    line-height: 16px;
+    color: #000000;
+    font-family: "Interstate", "Arial";
+    font-weight: 300;
+}
+.module.blue-tile .module-action-button {
+    border: 2px solid #56bbe8;
+    color: #2caae2;
+}
+.module.yellow-tile .module-action-button {
+    border: 2px solid #fbeaa8;
+    color: black;
+}
+
+.module-action-button {
+    font-size: 14px;
+    line-height: 18px;
+    font-family: "Interstate", "Arial";
+    font-weight: 800;
+    position: absolute;
+    right: 15px;
+    bottom: 15px;
+    padding: 5px 34px 5px 34px;
+    cursor: pointer;
+    background-color: #ffffff;
+}
+
+main {
+    margin: 0 auto;
+}
+
+
+p.sponsors-description {
+    margin-top: 40px;
+    margin-bottom: 35px;
+    font-size: 14px;
+}
+
+
+ul.sponsors-list{
+    display: grid;
+    grid-column-gap: 67px;
+    grid-auto-flow: column;
+}
+
+.polar {
+    margin-top: -15px;
+    margin-left: 7px;
+}
+.verndale {
+    margin-left: -23px;
+    margin-top: 15px;
+}
+.msg {
+    margin-left: -7px;
+    margin-top: -2px;
+}
+.sevenup{
+    margin-left: -7px;
+    margin-top: -5px;
+}

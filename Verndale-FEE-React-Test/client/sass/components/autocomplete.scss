@@ -1,0 +1,81 @@
+.Autocomplete {
+    position: relative;
+    &__input{
+        border: 1px solid #999;
+        border-radius: 0.5rem;
+        padding: 0.5rem;
+        height: 35px;
+        font-size: $font-size;
+        padding-left: 15px;
+        padding-right: 15px;
+        //remove IE 11 clear field weird button
+        &::-ms-clear {
+            display: none;
+        }
+    }
+
+    &__close-button {
+        color: black;
+        border: none;
+        border-radius: 50%;
+        width: 24px;
+        height: 24px;
+        position: absolute;
+        right: -19px;
+        top: 14px;
+        background-color: #cccccc;
+        cursor: pointer;
+        font-family: "Arial";
+        font-size: 16px;
+        font-weight: 600;
+    }
+
+    &__no-suggestions {
+        color: rgb(189, 180, 180);
+        padding: 0.5rem;
+    }
+
+    &__suggestions {
+        font-size: $font-size;
+        border: 1px solid #999;
+        border-top-width: 0;
+        list-style: none;
+        margin-top: 0;
+        max-height: 143px;
+        overflow-y: auto;
+        padding-left: 0;
+        position: absolute;
+        padding-top: 50px;
+        top: 15px;
+        li {
+            padding: 0.5rem;
+        }
+        
+    }
+    &__suggestion--active,
+    &__suggestion:hover {
+        background-color: #93ddf8;
+        cursor: pointer;
+    }
+    &__suggestion:hover {
+        background-color: #8dc5db;
+    }
+    ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+        color: $placeholder-color;
+        opacity: 1; /* Firefox */
+    }
+    
+    :-ms-input-placeholder { /* Internet Explorer 10-11 */
+        color: $placeholder-color;
+    }
+    
+    ::-ms-input-placeholder { /* Microsoft Edge */
+        color: $placeholder-color;
+    }
+}
+
+
+
+// .suggestions li:not(:last-of-type) {
+//     border-bottom: 1px solid #999;
+// }

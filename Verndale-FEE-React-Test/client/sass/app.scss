@@ -1,0 +1,11 @@
+@import "reset";
+@import "variables";
+@import "./components/autocomplete.scss";
+
+body,
+html {
+    font-weight: normal;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    padding: 30px;
+    font-size: 18px;
+}

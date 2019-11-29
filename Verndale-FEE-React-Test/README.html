@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Verndale Javascript Code Test Instructions</title>
+	<style>
+		body{
+			font-family: "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+			color: black;
+			padding: 0;
+			margin: 0;
+		}
+		h1, h2, h3, h4, h5, h6, p, li, a {
+			font-family: "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+			font-weight: 200;
+			width: 100%;
+		}
+		@media only screen and (max-width: 600px) {
+			h1, h2, h3, h4, h5, h6, p, li, a, em {
+				max-width: 84%;
+			}
+		}
+		h1 {
+			color: #000;
+		}
+		h3, p, li, a {
+			font-weight: 200;
+			letter-spacing: 1px;
+			box-sizing: border-box;
+		}
+		.holder {
+			width: 600px;
+			max-width: 98%;
+			margin: 50px auto;
+			padding: 30px;
+		}
+	</style>
+</head>
+<body>
+	<div class="holder">
+		<h1>Verndale Javascript code test - React</h1>
+
+		<p>Create an autocomplete component that allows users to enter a search term to search and select a state from the U.S.</p>
+		<p>This is a test of functionality, you do not need to create a pixel perfect design.</p>
+        <p>The purpose of this test is to examine your ability to write code and structure a small React component.</p>
+		<p>A reset css file is already imported in to the project as well as some stubbed out files, so you are ready to start writing your code.</p>
+		<p><b>client/js</b> and <b>client/sass</b> are the directories where you will be working in.</p>
+
+		<h2>Functional Specs</h2>
+		<p>See <b>component-wireframe.pdf</b> for wireframes.</p>
+		<ul>
+			<li>Start searching after 2 or more characters are entered in to the input field</li>
+            <li>When searching, you must hit the proivded API endpoint below and return the new results in the list</li>
+			<li>Navigate up and down through the results with the arrow keys - as you're navigating, the input value will update with the appropriate label</li>
+			<li>Select a result with either hitting "return" or a mouse click when over a result</li>
+			<li>Upon selection of a result, result list should go away</li>
+			<li>Show a max of 5 items in the result before vertical overflow is visible</li>
+		</ul>
+
+		<h2>Required build tools</h2>
+		<ul>
+			<li><a href="https://nodejs.org/en/" target="_blank">Node</a> - >= 6.1.x <=9.x.x</li>
+			<li><a href="http://webpack.github.io/docs/" target="_blank">Webpack</a> - Install via terminal: <b>sudo npm install -g webpack@3.10.0</b></li>
+		</ul>
+
+		<h2>Required tools/libs/frameworks:</h2>
+		<ul>
+			<li><a href="https://facebook.github.io/react/" target="_blank">React</a></li>
+			<li><a href="http://sass-lang.com/" target="_blank">SASS</a></li>
+		</ul>
+
+		<h2>Instructions</h2>
+		<ul>
+			<li>Open up terminal and navigate to the root of the project</li>
+			<li>Run: <b>npm install</b></li>
+			<li>After installation is complete, run: <b>webpack</b></li>
+			<li>After compilation, open your browser and navigate to <b>localhost:3000</b></li>
+		</ul>
+
+		<p>When you make a change to a Javascript or SCSS file in the <b>client</b> folder it will automatically compile, you will have to refresh your browser manually to see the change.</p>
+
+		<h2>API</h2>
+		<p><b>localhost:3000/api/states?term=&lt;search term&gt;</b></p>
+	</div>
+</body>
+</html>
