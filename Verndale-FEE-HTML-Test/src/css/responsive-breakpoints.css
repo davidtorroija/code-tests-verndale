@@ -1,33 +1,110 @@
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+    /* IE10+ CSS styles go here */
+    ul.module-list {
+        display: flex;
+        flex-wrap: wrap;
+        padding: 20px 0 0 20px;
+        margin-left: -80px;
+    }
+    ul.module-list li.module {
+        /* width: calc(100% / 3); calc() method */
+        /* border: 0 solid transparent;
+        border-width: 0 20px 20px 0; */
+        margin-left: 25px;
+    }
+    footer {
+        margin-left: -38px;
+    }
+    h2.module-title {
+        font-size: 16px;
+    }
+}
 
-@media (min-width: 320px) {
+@media (min-width: 320px) and (max-width: 767px) {
     li.module {
         width: auto;
         max-width: 420px;
-        font-size: 14px;
-        padding: 10px;
+        font-size: 18px;
+        padding: 15px;
         padding-top: 1px;
         margin: 0 auto;
+        height: auto;
+        padding-bottom: 50px;
     }
     ul.module-list {
         display: block;
     }
+    body {
+        margin-top: 65px;
+    }
+
+    .module > img {
+        width: 100%;
+    }
+    .module button.module-action-button {
+        left: 5%;
+        width: 90%;
+        margin-left: 0;
+        padding: 6px 8px 6px 8px;
+    }
+    .module p {
+        font-size: 18px;
+    }
+    .module-title {
+        font-size: 20px;
+    }
+    p.sponsors-description {
+        margin-top: 0;
+        margin-bottom: 0;
+        font-size: 17px;
+        line-height: 27px;
+        text-align: center;
+    }
+    footer {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    main footer ul.sponsors-list li {
+        margin: 0 auto;
+        padding-top: 20px;
+    }
+
+    main footer ul.sponsors-list li.sevenup {
+        width: 100%;
+        text-align: center;
+    }
+    .sponsors-list li img {
+        max-width: 190px;
+        position: relative;
+        
+    }
+    li.citibank, li.msg, li.polar, main footer ul.sponsors-list li.verndale {
+        margin: 0 auto;
+        height: auto;
+        width: 49%;
+        text-align: center;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1100px) {
     button.module-action-button {
         left: 50%;
         width: 190px;
         margin-left: calc(-190px / 2);
         padding: 6px 8px 6px 8px;
     }
-}
-@media (min-width: 769px) and (max-width: 1100px){
     li.module {
         width: 230px;
         font-size: 14px;
         padding: 10px;
         padding-top: 1px;
+        height: 450px;
     }
+
     ul.module-list {
         display: grid;
     }
+
     h2.module-title {
         font-size: 16px;
         line-height: 23px;
@@ -41,12 +118,41 @@
     }
     .module > img {
         width: 190px;
-        margin-top: 5px;
+        margin-top: 15px;
     }
     main {
-        max-width: 800px;
+        max-width: 730px;
     }
-    
+    .citibank > img {
+        width: 140px;
+    }
+    .msg {
+        margin-left: 10px;
+    }
+    .msg img {
+        width: 200px;
+    }
+    .polar {
+        width: 75px;
+    }
+    .polar img {
+        width: 47px;
+    }
+    ul.sponsors-list li.verndale {
+        margin-left: 0;
+        margin-top: 0;
+        width: 200px;
+        height: 51px;
+    }
+    .verndale img {
+        width: 180px;
+    }
+    .sevenup {
+        margin-left: 26px;
+    }
+    .sevenup img {
+        width: 55px;
+    }
 }
 
 @media (min-width: 1100px) {

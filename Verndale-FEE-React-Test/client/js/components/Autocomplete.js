@@ -25,7 +25,6 @@ class Autocomplete extends Component {
             // What the user has entered
             userInput: "",
 
-            pepe: [],
         };
 
         // this.onChange = debounce(this.onChange.bind(this),500)
@@ -33,20 +32,19 @@ class Autocomplete extends Component {
 
     // Event fired when the input value is changed
     onChange = async e => {
-        e.persist();
-        // const { suggestions } = this.props;
+        // e.persist(); TODO: remove this if we don't use debounce yet
         const userInput = e.currentTarget.value;
 
         if (userInput.length < 3) {
             this.setState({
                 userInput: e.currentTarget.value,
                 showSuggestions: false,
-                activeSuggestion: 0,
+                activeSuggestion: 0
             });
             return;
         }
 
-        const response = await fetch(`http://localhost:3000/api/states?term=${userInput}`)
+        const response = await fetch(`http://localhost:3000/api/states?term=${userInput}`);
         const suggestions = (await response.json()).data;
         this.setState({
             activeSuggestion: 0,
@@ -54,7 +52,6 @@ class Autocomplete extends Component {
             showSuggestions: true,
             userInput: userInput
         });
-
     };
 
     // Event fired when the user clicks on a suggestion
@@ -66,6 +63,8 @@ class Autocomplete extends Component {
             showSuggestions: false,
             userInput: e.currentTarget.innerText
         });
+
+        this.props.selectedState(e.currentTarget.innerText);
     };
 
     // Event fired when the user presses a key down
@@ -103,7 +102,7 @@ class Autocomplete extends Component {
         this.setState({
             userInput: "",
             showSuggestions: false,
-            activeSuggestion: 0,
+            activeSuggestion: 0
         });
     };
 
@@ -126,7 +125,7 @@ class Autocomplete extends Component {
         if (showSuggestions && userInput) {
             if (filteredSuggestions.length) {
                 suggestionsListComponent = (
-                    <ul className="Autocomplete__suggestions" style={{width: (parseFloat(width) + 30) + "px" }}>
+                    <ul className="Autocomplete__suggestions" style={{ width: parseFloat(width) + 30 + "px" }}>
                         {filteredSuggestions.map((suggestion, index) => {
                             let className = "Autocomplete__suggestion";
 
@@ -143,21 +142,25 @@ class Autocomplete extends Component {
                         })}
                     </ul>
                 );
-            } 
+            }
         }
 
         return (
-            <div className="Autocomplete" style={{width}}>
-                <input  
+            <div className="Autocomplete" style={{ width }}>
+                <input
                     className="Autocomplete__input"
-                    placeholder="Search States" 
-                    type="text" 
-                    onChange={onChange} 
-                    onKeyDown={onKeyDown} 
-                    value={userInput} 
-                    style={{width}}
+                    placeholder="Search States"
+                    type="text"
+                    onChange={onChange}
+                    onKeyDown={onKeyDown}
+                    value={userInput}
+                    style={{ width }}
                 />
-                { userInput ? <button className="Autocomplete__close-button" onClick={resetSearch}>x</button> : null }
+                {userInput ? (
+                    <button className="Autocomplete__close-button" onClick={resetSearch}>
+                        x
+                    </button>
+                ) : null}
                 {suggestionsListComponent}
             </div>
         );

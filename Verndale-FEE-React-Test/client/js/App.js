@@ -9,26 +9,26 @@ import app from "../sass/app";
 
 export default class Application extends Component {
     constructor(props) {
-		super(props);
-		this.state = {
+        super(props);
+        this.state = {
             error: null,
             isLoaded: false,
             items: []
         };
-	}
-	
-	componentDidMount() {
-     
+        this.selectedState = this.selectedState.bind(this);
+    }
+
+    componentDidMount() {}
+
+    selectedState(selectedState) {
+        console.log("selectedState", selectedState)
     }
 
     render() {
-		const { items } = this.state;
+        const { items } = this.state;
         return (
             <div>
-                <Autocomplete
-                    width="300px"
-                    // suggestions={items.map(item => item.name)}
-                />
+                <Autocomplete width="300px" selectedState={this.selectedState} />
             </div>
         );
     }

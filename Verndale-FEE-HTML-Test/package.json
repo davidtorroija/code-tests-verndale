@@ -1,0 +1,17 @@
+{
+  "name": "verndale-fee-html-test",
+  "version": "1.0.0",
+  "description": "I just did HTML and plain CSS to show my knowledge without SASS in the other React Test I use SASS and BEM Model convention. So I think this is better to show that I know CSS and also SASS.",
+  "main": "index.html",
+  "scripts": {
+    "build-css": "npx postcss ./src/css/*.css --use autoprefixer -d build/"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "autoprefixer": "^9.7.2"
+  },
+  "dependencies": {
+    "postcss-cli": "^6.1.3"
+  }
+}
